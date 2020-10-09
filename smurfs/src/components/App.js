@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
+import { connect } from 'react-redux';
+import { Smurf } from './smurf';
+import  Form  from './smurfForm';
+import Smurfs from './smurfs';
+import { fetchSmurfs } from '../store/actions';
+
+
 class App extends Component {
   render() {
     return (
@@ -8,9 +15,11 @@ class App extends Component {
         <div>Welcome to your state management version of Smurfs!</div>
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
+        <Form />
+        <Smurfs /> 
       </div>
     );
   }
 }
 
-export default App;
+export default connect(null, {fetchSmurfs})(App);

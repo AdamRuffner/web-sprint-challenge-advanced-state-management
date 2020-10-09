@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 
 
-const Smurf = ({ props }) => {
+export const Smurf = ( props ) => {
   return (
     <div className="name">
       <h1> {props.name} </h1>
@@ -14,10 +14,6 @@ const Smurf = ({ props }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-    return {
-        deleteSmurf: state.deleteSmurf,
-    }
-}
 
-export default connect(mapStateToProps) (Smurf);
+
+
